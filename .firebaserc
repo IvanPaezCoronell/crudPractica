@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "crud-consw": {
+      "hosting": {
+        "pruebaTecCons": [
+          "crud-consw"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "crud-consw"
+  }
+}

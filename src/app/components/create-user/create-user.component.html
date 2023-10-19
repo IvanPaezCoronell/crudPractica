@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3">
+      <div class="card text-center mt-5">
+        <div class="card-body">
+          <h3>Agregar Usuario</h3>
+
+          <form class="mt-8" [formGroup]="userForm" (ngSubmit)="onSubmit()" novalidate>
+            <div class="row mt-4">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Nombre" formControlName='name'/>
+              </div>
+              <div class="col">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Apellido"
+                  formControlName='lastname'
+                />
+              </div>
+            </div>
+
+            <input type="email" class="form-control mt-2" placeholder="Email" formControlName='email'/>
+            <input type="text" class="form-control mt-2" placeholder="Area" formControlName='department'/>
+
+            <div class="mt-2">
+              <button
+                routerLink="/listUser"
+                type="text"
+                class="btn btn-secondary btn-lg m-4"
+              >
+                Volver
+              </button>
+              <button type="submit" class="btn btn-success btn-lg" [disabled]="!userForm.valid">
+                Agregar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
